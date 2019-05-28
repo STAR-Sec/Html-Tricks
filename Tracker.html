@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Canadian Bad Eggs 2 </title>
+</head>
+<body>
+<h3> Welcome to James's Url Forwarder</h3>
+<p> Copyright num:07212021 "thanks for using Blazing.io for Ddos and cloudfare protection" </h1>
+<hr>
+<br>
+<br>
+<p>Generate Website Url</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Error: " + position.coords.latitude + 
+  "<br>Error Number: " + position.coords.longitude;
+}
+</script>
+<script>
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "Error Game need permission to load the file BadEggs2Mod.swf"
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+} 
+</script>
+</html>
